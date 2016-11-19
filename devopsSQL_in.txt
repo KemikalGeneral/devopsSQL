@@ -12,7 +12,7 @@ SELECT COUNT(*) AS NumberOfInventoryTransactionsWithQuantityOf_50_OrMore
 FROM inventory_transactions
 WHERE quantity>50;
 
-SELECT SUM(quantity) AS 
+SELECT SUM(quantity) 
 FROM order_details
 WHERE product_id='48';
 
