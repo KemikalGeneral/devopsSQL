@@ -1,11 +1,9 @@
 USE northwind;
 
-SELECT AS MESSAGE ' '
 SELECT first_name, last_name
 FROM employees
 WHERE job_title = 'Sales Representative';
 
-SELECT AS MESSAGE '---'
 SELECT last_name, company
 FROM customers
 WHERE job_title = 'Purchasing Manager';
