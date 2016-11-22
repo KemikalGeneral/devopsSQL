@@ -1,0 +1,28 @@
+first_name	last_name
+Nancy	Freehafer
+Jan	Kotas
+Mariya	Sergienko
+Michael	Neipper
+Robert	Zare
+Anne	Hellung-Larsen
+last_name	company
+Lee	Company D
+Pérez-Olaeta	Company F
+Mortensen	Company I
+Wacker	Company J
+Krschne	Company K
+Edwards	Company L
+Kupkova	Company O
+Li	Company T
+Entin	Company W
+Rodman	Company Y
+Toh	Company AA
+Raghav	Company BB
+Lee	Company CC
+NumberOfInventoryTransactionsWithQuantityOf_50_OrMore
+32
+QuantityOfOrdersForProduct_48
+200.0000
+product_code	product_name	ListPriceOver_50
+NWTJP-6	Northwind Traders Marmalade	81.0000
+NWTDFN-51	Northwind Traders Dried Apples	53.0000
