@@ -65,16 +65,16 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
-    #Update the packages and upgrade
+    #Update the packages and upgrade accepting all defaults
     echo -e "\nUpdating Server...\n"
     sudo apt-get update -y
     sudo apt-get upgrade -y
-    #Set username & password, and install mysql-server
+    #Set username & password, and install mysql-server accepting all defaults
     echo -e "\nInstalling MySQL Server...\n"
     sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password password"
     sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password password"
     sudo apt-get install mysql-server -y
-    #Install Git
+    #Install Git accepting all defaults
     echo -e "\nInstalling Git...\n"
     sudo apt-get install git -y
     #Clone the northwind repo
@@ -93,6 +93,9 @@ Vagrant.configure("2") do |config|
     cd devopsSQL
     #Run mysql using the username and password, passing in the SQL file, outputting to text
     echo -e "\nRunning Northwind Queries...\n"
-    sudo mysql --user=root --password=password < test.sql.txt > result.orig.txt
+    sudo mysql --user=root --password=password < test.sql.txt > result.new.txt
+    #Compare original query results file, with new results file
+    echo -e "\nComparing Files...\n"
+    diff result.orig.txt result.new.txt
    SHELL
 end
